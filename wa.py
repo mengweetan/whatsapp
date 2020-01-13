@@ -28,11 +28,10 @@ THRESHOLD = 50
 
 _aa = collections.Counter(_array)
 _aa = {k: v for k, v in reversed(sorted(_aa.items(), key=lambda item: item[1])) if v> THRESHOLD }
-#_aa = {k: v for k, v in _aa.items() if v> 50}
 objs = [ k for k,v in _aa.items()]
 performs = [ v for k,v in _aa.items()]
 
-print (objs)
+#print (objs)
 #print (performs)
 
 import matplotlib.pyplot as plt; plt.rcdefaults()
