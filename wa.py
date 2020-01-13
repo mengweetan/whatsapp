@@ -50,7 +50,7 @@ plt.barh(y_pos, performs, align='center', alpha=0.5)
 ax.set_yticks(y_pos)
 ax.set_yticklabels(objs)
 ax.invert_yaxis()  # labels read top-to-bottom
-ax.set_xlabel('# of Appearance (>50)')
+ax.set_xlabel('# of Appearance (>'+str(THRESHOLD)+')')
 ax.set_title('Group Chat Activity 10/7/18 - 10/1/20 (noon)')
 
 plt.show()
