@@ -21,7 +21,8 @@ with open('_chat.txt', 'r') as f:
 			_ll =_ll.replace('\xa0', ' ')
 			_ll =_ll.replace('\u202c', '')
 
-			if _ll!= 'Class of 1983' not in _ll  : 
+
+			if _ll!= 'Class of 1983' : 
 				_array.append(_ll[:_ll.find(':')])
 				_data.append([_r.group(1),_r.group(2), _ll[:_ll.find(':')]])
 
@@ -47,6 +48,7 @@ g = df.groupby('Person')['Date'].count().reset_index(name='Msg').sort_values('Ms
 
 import matplotlib.pyplot as plt; plt.rcdefaults()
 import numpy as np
+
 
 
 fig, ax = plt.subplots()
@@ -90,9 +92,5 @@ ax.set_yticklabels(objs)
 ax.invert_yaxis()  # labels read top-to-bottom
 ax.set_xlabel('# of Appearance (>'+str(THRESHOLD)+')')
 ax.set_title('Group Chat Activity 10/7/18 - 10/1/20 (noon)')
-
-
-
-
 
 plt.show()
